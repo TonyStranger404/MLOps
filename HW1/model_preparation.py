@@ -7,15 +7,15 @@ import joblib
 
 def main():
     # Загрузка данных
-    X_train = pd.read_csv('F:/Games/JetBrains/Projects/MLOps/MLOps/train/X_train_scaled.csv')
-    y_train = pd.read_csv('F:/Games/JetBrains/Projects/MLOps/MLOps/train/y_train.csv')
+    X_train = pd.read_csv('/MLOps/HW1/train/X_train_scaled.csv')
+    y_train = pd.read_csv('/MLOps/HW1/train/y_train.csv')
 
     # Создание и обучение модели линейной регрессии
     model = LinearRegression()
     model.fit(X_train, y_train)
 
     # Сохранение обученной модели
-    joblib.dump(model, 'F:/Games/JetBrains/Projects/MLOps/MLOps/model/linear_regression_model.pkl')
+    joblib.dump(model, '/MLOps/HW1/model/linear_regression_model.pkl')
 
     # Опционально: Вычисление и вывод метрики модели
     y_pred = model.predict(X_train)
